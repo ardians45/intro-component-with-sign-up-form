@@ -1,0 +1,182 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  --color-blue: hsl(248, 32%, 49%);
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid yellow; */
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-red);
+  background-image: url(images/bg-intro-desktop.png);
+  font-size: 16px;
+  color: white;
+  margin: 50px 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+  gap: 10px;
+}
+article h1 {
+  font-size: 2.5rem;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  width: 1000px;
+  gap: 10px;
+}
+
+aside nav {
+  background-color: var(--color-blue);
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+}
+
+aside nav p {
+  font-weight: 500;
+}
+
+aside nav span {
+  font-weight: 100;
+  color: var(--color-grayish-blue);
+}
+
+form {
+  background-color: white;
+  border-radius: 10px;
+  height: 410px;
+  padding: 25px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="password"] {
+  display: inline-block;
+}
+
+.form-control button {
+  color: white;
+  background-color: var(--color-green);
+  text-transform: uppercase;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-top: 35px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0px -1px 2px rgba(0, 0, 0, 0.08);
+}
+
+aside .term p {
+  color: var(--color-grayish-blue);
+  font-size: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+aside .term p span {
+  color: var(--color-red);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+input[type="text"].error,
+input[type="email"].error,
+input[type="password"].error {
+  border-color: var(--color-red);
+}
+
+.error-message {
+  position: absolute;
+  color: var(--color-red);
+  right: 140px;
+  font-size: 0.7rem;
+  font-style: italic;
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 10px; /* Adjust margin for smaller screens */
+  }
+
+  article {
+    margin-left: 0; /* Remove left margin for smaller screens */
+  }
+
+  aside {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+  form {
+    height: 440px;
+  }
+  .error-message {
+    right: 75px;
+  }
+  article h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  article p {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  aside {
+    padding: 0; /* Remove padding for larger screens */
+  }
+}
